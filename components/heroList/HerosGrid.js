@@ -1,5 +1,5 @@
 import HeroCard from './HeroCard';
-import classes from './hero-grid.module.css';
+import classes from './heros-grid.module.css';
 
 const HerosGrid = ({ heros }) => {
   return (

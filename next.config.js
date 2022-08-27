@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['i.annihil.us'],
+    domains: ['i.annihil.us', 'gateway.marvel.com'],
   },
 };
 

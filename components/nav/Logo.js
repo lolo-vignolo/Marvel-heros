@@ -4,16 +4,16 @@ import classes from './logo.module.css';
 function Logo() {
   return (
     <div className={classes.divlog}>
-      <div>
+      <div className={classes.imgBox}>
         <Image
           src="/pictures/logo.png"
           alt="logo"
-          width={50}
-          height={50}
+          width={70}
+          height={70}
           className={classes.img}
         />
       </div>
-      <div className={classes.logo}>home</div>
+      <div className={classes.logo}>Home</div>
     </div>
   );
 }

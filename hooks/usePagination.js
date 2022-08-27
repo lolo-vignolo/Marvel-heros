@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export const usePagination = ({ filteredHeros }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(9);
+  const [itemsPerPage] = useState(15);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;

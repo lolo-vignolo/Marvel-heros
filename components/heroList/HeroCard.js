@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import classes from './hero-item.module.css';
+
+import classes from './hero-card.module.css';
 
 const variants = {
   hidden: {
@@ -17,16 +18,7 @@ const variants = {
 };
 
 const HeroCard = ({ hero, index }) => {
-  const {
-    id,
-    name,
-    thumbnail,
-    comics,
-    series,
-    stories,
-    modified,
-    description,
-  } = hero;
+  const { id, name, thumbnail, comics, modified } = hero;
 
   const formattedDate = new Date(modified).toLocaleDateString('en-US', {
     day: 'numeric',
@@ -34,7 +26,7 @@ const HeroCard = ({ hero, index }) => {
     year: 'numeric',
   });
 
-  const linkPath = `/hero/${id}`;
+  const linkPath = `hero/${id}`;
   return (
     <motion.li
       className={classes.post}
@@ -57,8 +49,13 @@ const HeroCard = ({ hero, index }) => {
           </div>
           <div className={classes.content}>
             <h3>{name}</h3>
-            <time>{formattedDate}</time>
-            <p className={classes.paragraph}>hol</p>
+            <time>Modified: {formattedDate}</time>
+            <p className={classes.paragraph}>
+              <span style={{ color: 'red' }}>we can see it in: </span>
+              <br />
+              {comics.available} comics
+            </p>
+            <p className={classes.more}>see More...</p>
           </div>
         </a>
       </Link>
