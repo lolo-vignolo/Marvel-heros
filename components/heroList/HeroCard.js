@@ -38,7 +38,7 @@ const HeroCard = ({ hero, index }) => {
   return (
     <motion.li
       className={classes.post}
-      custom={{ delay: (index + 1) * 0.3 }}
+      custom={{ delay: (index + 1) * 0.2 }}
       initial="hidden"
       animate="visible"
       exit={'hidden'}
