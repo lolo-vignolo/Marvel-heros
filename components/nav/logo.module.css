@@ -1,0 +1,44 @@
+.divlog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: var(--size-5);
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: var(--color-grey-50);
+}
+
+.logo h1 {
+  font-size: 1rem;
+}
+.img {
+  animation: App-logo-spin infinite 20s linear !important;
+}
+
+@media (min-width: 768px) {
+  .divlog {
+    width: var(--size-50);
+    margin-bottom: 1rem;
+  }
+  .logo {
+    font-size: var(--size-10);
+    margin-bottom: 0.8rem;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

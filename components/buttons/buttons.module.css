@@ -1,0 +1,28 @@
+.btn {
+  background-color: var(--color-primary-500);
+  color: white;
+  padding: 0.2rem;
+  border-radius: 70px;
+  font-size: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.1rem;
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-800);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 70px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: var(--size-20);
+    height: var(--size-10);
+  }
+}

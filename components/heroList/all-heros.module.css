@@ -1,0 +1,36 @@
+.posts {
+  width: 90%;
+  max-width: 60rem;
+  margin: var(--size-8) auto;
+}
+
+.allPosts {
+  text-align: center;
+  padding: var(--size-8) 0;
+}
+
+.posts h1 {
+  font-size: var(--size-8);
+  color: var(--color-black-800);
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .posts {
+    width: 90%;
+    max-width: 80rem;
+    margin: var(--size-8) auto;
+  }
+  .posts h1 {
+    font-size: var(--size-16);
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+
+  .allPosts {
+    text-align: center;
+    padding: var(--size-8) 0;
+  }
+}

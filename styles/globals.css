@@ -1,26 +1,113 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  --color-black-50: #f7fafc;
+  --color-black-100: #edf2f7;
+  --color-black-200: #e2e8f0;
+  --color-black-300: #cbd5e0;
+  --color-black-400: #a0aec0;
+  --color-black-500: #718096;
+  --color-black-600: #4a5568;
+  --color-black-700: #2d3748;
+  --color-black-800: #1a202c;
+  --color-black-900: #171923;
+
+  --color-primary-50: #ffcdd2;
+  --color-primary-100: #ef9a9a;
+  --color-primary-200: #e57373;
+  --color-primary-300: #ef5350;
+  --color-primary-400: #f44336;
+  --color-primary-500: #e53935;
+  --color-primary-600: #d32f2f;
+  --color-primary-700: #c62828;
+  --color-primary-800: #b71c1c;
+  --color-primary-900: #b71c1c;
+
+  --color-success-100: #a2f0bc;
+  --color-success-500: #12bd4b;
+
+  --color-error-100: #f1acc9;
+  --color-error-500: #a10c4a;
+
+  --color--multicolor: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-8: 2rem;
+  --size-10: 3rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-40: 10rem;
+  --size-50: 11rem;
+
+  margin: 0;
+
+  background-color: var(--color-black-900);
+  color: var(--color-primary-400);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.dark {
+  height: auto;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-black-900),
+    var(--color-primary-900)
+  );
+  padding-bottom: 1rem;
+}
+
+.dark p {
+  font-size: var(--size-5);
+  color: var(--color-black-200);
+  width: 75%;
+  max-width: 40rem;
+  margin: auto;
+}
+
+.light {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary-300),
+    var(--color-black-600)
+  );
+  padding-bottom: 1rem;
+}
+
+.light p {
+  font-size: var(--size-5);
+  color: var(--color-black-900);
+  width: 75%;
+  max-width: 40rem;
+  margin: auto;
 }
