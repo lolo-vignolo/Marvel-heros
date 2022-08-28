@@ -25,8 +25,8 @@ function AuthForm({ handleLogin }) {
         <Image
           src="/pictures/ironMan.png"
           alt="Marvel"
-          width={180}
-          height={250}
+          width={200}
+          height={280}
         />
       </div>
     </section>

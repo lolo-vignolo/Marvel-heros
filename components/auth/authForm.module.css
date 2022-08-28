@@ -1,19 +1,18 @@
 .auth {
+  align-items: space-around;
+  background-color: #2d3748;
+  border-radius: 20px;
+  border: solid 1px #a2d2ff;
+  box-shadow: 0 1px 4px rgba(117, 93, 93, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: space-around;
-  justify-content: center;
-  width: 90%;
   height: 18rem;
+  justify-content: center;
+  margin-top: 15rem;
   max-width: 28rem;
-  border-radius: 20px;
-  background-color: #2d3748;
-  box-shadow: 0 1px 4px rgba(117, 93, 93, 0.2);
   padding: 1rem;
   text-align: center;
-  border: solid 1px #a2d2ff;
-
-  margin-top: 15rem;
+  width: 90%;
 }
 
 .auth h1 {
@@ -47,38 +46,65 @@
 }
 
 .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: auto;
   justify-content: center;
   width: 100%;
-  height: auto;
 }
 .spider {
-  z-index: 1 !important;
   position: absolute;
   top: 0;
+  z-index: 1 !important;
 }
 .iron {
-  z-index: 1 !important;
   position: absolute;
-  top: 31rem;
   right: 0rem;
+  top: 31rem;
+  z-index: 1 !important;
 }
 
 @media (min-width: 768px) {
   .auth {
-    width: 50%;
     height: 18rem;
+    width: 50%;
   }
   .auth h1 {
     font-size: 2.5rem;
     font-weight: bold;
   }
   .iron {
-    z-index: 1 !important;
     position: absolute;
-    top: 28rem;
-    right: 25rem;
+    right: 22rem;
+    top: 31rem;
+    z-index: 1 !important;
+  }
+}
+
+@media (min-width: 1450px) {
+  .auth {
+    height: 25rem;
+    width: 70%;
+  }
+  .auth h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+  .auth h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  .btn {
+    font-size: 1.4rem;
+    padding: 12px 25px;
+  }
+
+  .iron {
+    position: absolute;
+    right: 46rem;
+    top: 38rem;
+    z-index: 1 !important;
   }
 }
