@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={classes.container}>
       <div className={classes.company}>
         <Image src="/pictures/comics.png" alt="logo" width={70} height={60} />
-        <h4>kubide & Marvel</h4>
+        <h4>Kubide & Marvel</h4>
         <Image src="/pictures/kubide.png" alt="logo" width={70} height={60} />
       </div>
       <div>

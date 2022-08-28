@@ -27,7 +27,7 @@ const AllHeros = ({ heros }) => {
   const empty = {
     height: 800,
     width: 600,
-    text: `No Heroes found.`,
+    text: `No Heros found.`,
   };
 
   return (
@@ -39,7 +39,7 @@ const AllHeros = ({ heros }) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            MARVEL HEROS
+            MARVEL HEROES
           </motion.h1>
 
           <Image
