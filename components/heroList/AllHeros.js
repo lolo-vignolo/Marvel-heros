@@ -27,7 +27,7 @@ const AllHeros = ({ heros }) => {
   const empty = {
     height: 800,
     width: 600,
-    text: `No Heros found.`,
+    text: `No Heroes found.`,
   };
 
   return (
