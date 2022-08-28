@@ -6,6 +6,7 @@ import HerosGrid from './HerosGrid';
 import { Pagination } from '../helpers/Pagination';
 import { usePagination } from '../../hooks/usePagination';
 import classes from './all-heros.module.css';
+import Empty from '../emptySearch/Empty';
 
 const AllHeros = ({ heros }) => {
   const [search, setSearch] = useState('');
@@ -21,6 +22,12 @@ const AllHeros = ({ heros }) => {
       return hero.name.toLowerCase().includes(e.target.value.toLowerCase());
     });
     setFilteredHeros(filtered);
+  };
+
+  const empty = {
+    height: 800,
+    width: 600,
+    text: `No Heroes found.`,
   };
 
   return (
@@ -54,7 +61,16 @@ const AllHeros = ({ heros }) => {
         </div>
         <hr className={classes.hr} />
 
-        <HerosGrid heros={currentItems} />
+        {currentItems.length > 0 ? (
+          <HerosGrid heros={currentItems} />
+        ) : (
+          <Empty
+            picture="/pictures/capitane.png"
+            height={empty.height}
+            width={empty.width}
+            text={empty.text}
+          />
+        )}
       </section>
       <Pagination
         totalItems={heros.length}

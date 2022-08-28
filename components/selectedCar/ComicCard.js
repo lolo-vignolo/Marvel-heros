@@ -17,7 +17,14 @@ const variants = {
 
 const ComicCard = ({ comic, index }) => {
   const { id, title, thumbnail, description } = comic;
-
+  if (
+    description === null ||
+    description === '' ||
+    description === undefined ||
+    description.length < 20
+  ) {
+    return null;
+  }
   return (
     <motion.li
       className={classes.post}

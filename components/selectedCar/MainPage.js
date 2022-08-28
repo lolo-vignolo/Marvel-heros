@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+
 import Image from 'next/image';
+
+import confetti from 'canvas-confetti';
 
 import { existInTeam, toggleLocalTeam } from '../helpers/localTeam';
 import ComicsGrid from './ComicsGrid';
@@ -16,6 +19,19 @@ const MainPage = ({ hero, comicsResp }) => {
   const onToggleTeam = () => {
     toggleLocalTeam(id);
     setIsInTeam(!isInTeam);
+    if (!isInTeam) {
+      confetti({
+        zIndex: 999,
+        particleCount: 200,
+        spread: 200,
+        angle: -100,
+        startVelocity: 60,
+        origin: {
+          x: 1,
+          y: 0,
+        },
+      });
+    }
   };
   return (
     <section className={classes.main}>

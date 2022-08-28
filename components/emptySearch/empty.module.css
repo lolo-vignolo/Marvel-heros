@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem auto;
+  padding: 0;
+}
+
+.container h1 {
+  font-size: var(--size-6);
+  margin: var(--size-4) 0;
+  text-shadow: 0 0 0.5rem var(--color-black-500);
+}
+
+@media (min-width: 768px) {
+  .container {
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+  .container h1 {
+    font-size: var(--size-10);
+    margin: var(--size-8) 0;
+  }
+}

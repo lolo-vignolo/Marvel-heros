@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import { getInfoTeam, herosLocalStorage, infoTeam } from '../helpers/localTeam';
-import Empty from './Empty';
-import classes from './team.module.css';
+
 import TeamList from './TeamList';
+import Empty from '../emptySearch/Empty';
+import classes from './team.module.css';
 
 const Team = ({ herosStatic }) => {
   const [heros, setHeroes] = useState(herosLocalStorage());
@@ -14,7 +15,7 @@ const Team = ({ herosStatic }) => {
 
   const [getInfoStoreage, setGetInfoStoreage] = useState({});
 
-  const { teamDescription: description, teamName: name } = getInfoStoreage;
+  //const { teamDescription: description, teamName: name } = getInfoStoreage;
 
   const information = {
     teamName,
@@ -22,6 +23,7 @@ const Team = ({ herosStatic }) => {
   };
 
   useEffect(() => {
+    setGetInfoStoreage(getInfoTeam());
     if (heros.length > 0) {
       setHerosInfo(
         heros?.map((hero) =>
@@ -47,14 +49,34 @@ const Team = ({ herosStatic }) => {
     setTeamDescription('');
   };
 
+  const empty = {
+    height: 600,
+    width: 800,
+    text: `No Heros, Build your team!`,
+  };
+
   return (
-    <div>
-      <div>
-        <h1>{name}</h1>
-        <p>{description}</p>
-      </div>
+    <div className={classes.main}>
       <div className={classes.container}>
-        {!heros.length > 0 ? <Empty /> : <TeamList info={herosInfo} />}
+        {!heros.length > 0 ? (
+          <Empty
+            picture="/pictures/hero.png"
+            height={empty.height}
+            width={empty.width}
+            text={empty.text}
+          />
+        ) : (
+          <>
+            <div className={classes.information}>
+              <h1>Team: {getInfoStoreage ? getInfoStoreage.teamName : ''}</h1>
+              <p>
+                <span style={{ color: '#ef5350' }}>Description: </span>
+                {getInfoStoreage ? getInfoStoreage.teamDescription : ''}
+              </p>
+            </div>
+            <TeamList info={herosInfo} />
+          </>
+        )}
       </div>
       <div>
         <form className={classes.form} onSubmit={handleSubmit}>
@@ -73,7 +95,9 @@ const Team = ({ herosStatic }) => {
             onChange={handleDescription}
           />
 
-          <button type="submit">Add</button>
+          <button className={classes.btn} type="submit">
+            Add Info
+          </button>
         </form>
       </div>
     </div>

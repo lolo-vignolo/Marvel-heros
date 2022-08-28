@@ -70,6 +70,7 @@
   font-size: var(--size-6);
   font-weight: bold;
   margin-bottom: var(--size-2);
+  margin-left: 1rem;
 }
 .info h3 {
   color: var(--color-black-100);
@@ -138,7 +139,7 @@
   }
   .info h1 {
     align-self: flex-start;
-    font-size: var(--size-12);
+    font-size: var(--size-10);
     margin-bottom: 0;
     margin-left: 1rem;
   }
