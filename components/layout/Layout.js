@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import Head from 'next/head';
 
 import MainNavigation from '../nav/MainNavigation';
-import Footer from '@components/footer/Footer';
+import Footer from '../footer/Footer';
 
 const origin = typeof window !== 'undefined' ? window.location.origin : '';
 
