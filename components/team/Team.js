@@ -51,7 +51,7 @@ const Team = ({ herosStatic }) => {
   const empty = {
     height: 600,
     width: 800,
-    text: `No Heros, Build your team!`,
+    text: `No Heroes, Build your team!`,
   };
 
   return (
