@@ -44,12 +44,12 @@
   width: 80%;
 }
 .comicsCont h1 {
-  font-size: var(--size-8);
   color: var(--color-primary-300);
-  width: 80%;
-  max-width: 50rem;
-  margin: auto;
+  font-size: var(--size-8);
   margin-top: 2rem;
+  margin: auto;
+  max-width: 50rem;
+  width: 80%;
 }
 
 .info {

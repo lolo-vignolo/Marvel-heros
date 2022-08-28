@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import HerosGrid from './HerosGrid';
-import { Pagination } from '../helpers/Pagination';
 import { usePagination } from '../../hooks/usePagination';
-import classes from './all-heros.module.css';
+import HerosGrid from './HerosGrid';
 import Empty from '../emptySearch/Empty';
+import { Pagination } from '../helpers/Pagination';
+import classes from './all-heros.module.css';
 
 const AllHeros = ({ heros }) => {
   const [search, setSearch] = useState('');

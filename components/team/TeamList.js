@@ -1,6 +1,6 @@
 import React from 'react';
-import HerosGrid from '../heroList/HerosGrid';
 
+import HerosGrid from '../heroList/HerosGrid';
 import classes from './teamList.module.css';
 
 const TeamList = ({ info }) => {

@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+
 import classes from './comicCard.module.css';
+
 const variants = {
   hidden: {
     opacity: 0,

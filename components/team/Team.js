@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import { getInfoTeam, herosLocalStorage, infoTeam } from '../helpers/localTeam';
-
 import TeamList from './TeamList';
 import Empty from '../emptySearch/Empty';
+import { getInfoTeam, herosLocalStorage, infoTeam } from '../helpers/localTeam';
 import classes from './team.module.css';
 
 const Team = ({ herosStatic }) => {
@@ -74,6 +73,7 @@ const Team = ({ herosStatic }) => {
                 {getInfoStoreage ? getInfoStoreage.teamDescription : ''}
               </p>
             </div>
+            <hr className={classes.hr} />
             <TeamList info={herosInfo} />
           </>
         )}

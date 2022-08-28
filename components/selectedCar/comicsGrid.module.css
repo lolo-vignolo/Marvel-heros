@@ -1,11 +1,11 @@
 .grid {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
+  margin-left: -2.5rem;
   margin-top: var(--size-10);
   width: 95%;
-  margin-left: -2.5rem;
 }
 
 @media (min-width: 768px) {

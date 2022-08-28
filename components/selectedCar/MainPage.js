@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import Image from 'next/image';
-
 import confetti from 'canvas-confetti';
 
 import { existInTeam, toggleLocalTeam } from '../helpers/localTeam';

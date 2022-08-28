@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import MainNavigation from '../nav/MainNavigation';
 
-const Layout = ({ children, name }) => {
+const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {

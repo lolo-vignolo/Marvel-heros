@@ -41,10 +41,10 @@
   color: var(--color-primary-500);
   font-size: var(--size-4);
   height: 3rem;
+  margin-top: 1rem;
   outline: none;
   padding: 0 var(--size-2);
   width: 80%;
-  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {

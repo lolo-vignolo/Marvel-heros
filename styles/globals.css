@@ -88,12 +88,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Oswald', 'Roboto', sans-serif;
-}
-
 a {
   text-decoration: none;
 }
@@ -114,11 +108,17 @@ button {
 }
 
 .dark p {
-  font-size: var(--size-5);
   color: var(--color-black-200);
-  width: 75%;
-  max-width: 40rem;
+  font-size: var(--size-5);
   margin: auto;
+  max-width: 40rem;
+  width: 75%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', 'Roboto', sans-serif;
 }
 
 .light {
@@ -131,9 +131,9 @@ button {
 }
 
 .light p {
-  font-size: var(--size-5);
   color: var(--color-black-900);
-  width: 75%;
-  max-width: 40rem;
+  font-size: var(--size-5);
   margin: auto;
+  max-width: 40rem;
+  width: 75%;
 }
