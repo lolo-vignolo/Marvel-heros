@@ -1,111 +1,34 @@
-import { useState, useRef } from 'react';
-//import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 import classes from './authForm.module.css';
-//import createUser from '../auth/createUser';
 
-function AuthForm() {
-  const inputRefEmail = useRef();
-  const inputRefPassword = useRef();
-
-  //modal
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalError, setMessageError] = useState(false);
-  const [loginError, setLoginError] = useState(false);
-
-  const router = useRouter();
-
-  // puedo agregar validation
-
-  const [isLogin, setIsLogin] = useState(true);
-
-  function switchAuthModeHandler() {
-    setIsLogin((prevState) => !prevState);
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    const userEmail = inputRefEmail.current.value;
-    const userPassword = inputRefPassword.current.value;
-    setMessageError(false);
-    setModalVisible(false);
-    setLoginError(false);
-
-    // if (isLogin) {
-    //   const result = await signIn('credentials', {
-    //     redirect: false,
-    //     email: userEmail,
-    //     password: userPassword,
-    //   });
-    //   if (result.error) {
-    //     setLoginError(true);
-    //   }
-    //   if (!result.error) {
-    //     router.replace('/');
-    //   }
-    // } else {
-    //   // creo nuevo
-    //   try {
-    //     const result = await createUser(userEmail, userPassword);
-    //     if (!result.message) {
-    //       setMessageError(true); // error al crear usuario
-    //     } else {
-    //       setModalVisible(true);
-    //     }
-    //     console.log(result);
-    //   } catch (err) {
-    //     setMessageError(true);
-    //     console.log(err);
-    //   }
-    // }
-  }
-
+function AuthForm({ handleLogin }) {
   return (
-    <section className={classes.auth}>
-      <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
-      <form onSubmit={handleSubmit}>
-        <div className={classes.control}>
-          <label htmlFor="email">Your Email</label>
-          <input type="email" id="email" required ref={inputRefEmail} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor="password">Your Password</label>
-          <input
-            type="password"
-            id="password"
-            required
-            ref={inputRefPassword}
-          />
-        </div>
-        <div className={classes.actions}>
-          <button>{isLogin ? 'Login' : 'Create Account'}</button>
-          <button
-            type="button"
-            className={classes.toggle}
-            onClick={switchAuthModeHandler}
-          >
-            {isLogin ? 'Create new account' : 'Login with existing account'}
+    <section className={classes.container}>
+      <div className={classes.spider}>
+        <Image
+          src="/pictures/spider.png"
+          alt="Marvel"
+          width={200}
+          height={300}
+        />
+      </div>
+      <div className={classes.auth}>
+        <div>
+          <h1>I am an User!</h1>
+          <h4>Press Login to start an amazing experience!</h4>
+          <button className={classes.btn} onClick={() => handleLogin()}>
+            Login
           </button>
-          <h3
-            className="textLogin"
-            style={{ color: '#DA353F', fontSize: 'medium' }}
-          >
-            If this is your first time in the App, create an account
-          </h3>
-
-          <h3 className={classes.messageError}>
-            {loginError && ' your password or email is incorrect, try again'}
-          </h3>
-          <h3 className={classes.message}>
-            {modalVisible && ' new user created, now go to Login!'}
-          </h3>
-          <h3 className={classes.messageError}>
-            {modalError && 'there already exist an user with that Email'}
-          </h3>
         </div>
-      </form>
+      </div>
+      <div className={classes.iron}>
+        <Image
+          src="/pictures/ironMan.png"
+          alt="Marvel"
+          width={180}
+          height={250}
+        />
+      </div>
     </section>
   );
 }

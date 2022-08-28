@@ -13,28 +13,30 @@ const Layout = ({ children }) => {
     setDarkMode(!darkMode);
   };
   return (
-    <Fragment>
-      <Head>
-        <title>Marvel</title>
-        <meta name="author" content="Lorenzo Vignolo" />
-        <meta name="description" content={`info about Marvel Heros`} />
-        <meta name="keywords" content={`marvel, heros`} />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
+    <>
+      <Fragment>
+        <Head>
+          <title>Marvel</title>
+          <meta name="author" content="Lorenzo Vignolo" />
+          <meta name="description" content={`info about Marvel Heros`} />
+          <meta name="keywords" content={`marvel, heros`} />
+          <meta name="robots" content="index, follow" />
+          <meta name="googlebot" content="index, follow" />
+          <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Marvel Heros" />
-        <meta
-          property="og:description"
-          content="A web where you can find Heros from Marvel"
-        />
-        <meta property="og:image" content={`${origin}/pictures/meta.png`} />
-      </Head>
+          <meta property="og:title" content="Marvel Heros" />
+          <meta
+            property="og:description"
+            content="A web where you can find Heros from Marvel"
+          />
+          <meta property="og:image" content={`${origin}/pictures/meta.png`} />
+        </Head>
 
-      <MainNavigation toggleDarkMode={toggleDarkMode} />
-      <main className={darkMode ? 'dark' : 'light'}>{children}</main>
-      <Footer />
-    </Fragment>
+        <MainNavigation toggleDarkMode={toggleDarkMode} />
+        <main className={darkMode ? 'dark' : 'light'}>{children}</main>
+        <Footer />
+      </Fragment>
+    </>
   );
 };
 
