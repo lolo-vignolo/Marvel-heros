@@ -37,13 +37,34 @@ body {
   --color-error-100: #f1acc9;
   --color-error-500: #a10c4a;
 
-  --color--multicolor: linear-gradient(
-    to bottom right,
-    #b827fc 0%,
-    #2c90fc 25%,
-    #b8fd33 50%,
-    #fec837 75%,
-    #fd1892 100%
+  --color--multicolor: radial-gradient(
+    circle at 62.3% 45.52%,
+    #f71e86 0,
+    #f91d77 10%,
+    #fa2168 20%,
+    #f92959 30%,
+    #f6324b 40%,
+    #f23c3c 50%,
+    #ec462d 60%,
+    #e64f1c 70%,
+    #de5803 80%,
+    #d56000 90%,
+    #cb6800 100%
+  );
+
+  --color--multicolor-gradient: radial-gradient(
+    circle at 62.3% 45.52%,
+    #d90059 0,
+    #d9004a 10%,
+    #d7003c 20%,
+    #d4002d 30%,
+    #d0001d 40%,
+    #ca0909 50%,
+    #c32300 60%,
+    #bb3200 70%,
+    #b23e00 80%,
+    #a84700 90%,
+    #9e5000 100%
   );
 
   --size-1: 0.25rem;
@@ -54,6 +75,7 @@ body {
   --size-6: 1.5rem;
   --size-8: 2rem;
   --size-10: 3rem;
+  --size-12: 3.5rem;
   --size-16: 4rem;
   --size-20: 5rem;
   --size-40: 10rem;

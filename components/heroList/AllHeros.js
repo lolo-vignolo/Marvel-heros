@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import HerosGrid from './HerosGrid';
@@ -33,6 +34,15 @@ const AllHeros = ({ heros }) => {
           >
             MARVEL HEROS
           </motion.h1>
+
+          <Image
+            src="/pictures/logo.png"
+            alt="logo"
+            width={90}
+            height={90}
+            className={classes.img}
+          />
+
           <input
             className={classes.searchInput}
             type="text"

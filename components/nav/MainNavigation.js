@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 import Logo from './Logo';
-import classes from './main-navigation.module.css';
 import ButtonMood from '../buttons/ButtonMood';
+import classes from './main-navigation.module.css';
 
 function MainNavigation({ toggleDarkMode }) {
   return (
