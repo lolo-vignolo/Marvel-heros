@@ -77,11 +77,12 @@
   font-size: var(--size-4);
   margin-bottom: var(--size-2);
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 .info h4 {
   color: var(--color-black-100);
   font-size: var(--size-4);
-  margin-bottom: var(--size-2);
+  margin-bottom: var(--size-3);
 }
 .img {
   margin: var(--size-4);
