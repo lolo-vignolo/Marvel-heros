@@ -9,6 +9,7 @@ import {
   herosLocalStorage,
   infoTeam,
 } from '../../helpers/localTeam';
+import FormInfo from './FormInfo';
 
 const Team = ({ herosStatic }) => {
   const [heros, setHeroes] = useState(herosLocalStorage());
@@ -18,8 +19,6 @@ const Team = ({ herosStatic }) => {
   const [teamDescription, setTeamDescription] = useState('');
 
   const [getInfoStoreage, setGetInfoStoreage] = useState({});
-
-  //const { teamDescription: description, teamName: name } = getInfoStoreage;
 
   const information = {
     teamName,
@@ -56,7 +55,7 @@ const Team = ({ herosStatic }) => {
   const empty = {
     height: 600,
     width: 800,
-    text: `No Heroes, Build your team!`,
+    text: `No Heroes. Build your team!`,
   };
 
   return (
@@ -84,26 +83,17 @@ const Team = ({ herosStatic }) => {
         )}
       </div>
       <div>
-        <form className={classes.form} onSubmit={handleSubmit}>
-          <input
-            className={classes.input}
-            placeholder="Team Name..."
-            name="title"
-            value={teamName}
-            onChange={handleName}
+        {heros.length > 0 ? (
+          <FormInfo
+            handleName={handleName}
+            handleDescription={handleDescription}
+            handleSubmit={handleSubmit}
+            teamName={teamName}
+            teamDescription={teamDescription}
           />
-          <textarea
-            className={classes.textarea}
-            placeholder="Description..."
-            name="description"
-            value={teamDescription}
-            onChange={handleDescription}
-          />
-
-          <button className={classes.btn} type="submit">
-            Add Info
-          </button>
-        </form>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );

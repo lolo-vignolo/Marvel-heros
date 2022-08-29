@@ -105,9 +105,10 @@
 }
 
 @media (min-width: 768px) {
-  .main {
-    padding-top: 3rem;
+  .form {
+    margin-top: 4rem;
   }
+
   .information {
     width: 48%;
   }
@@ -124,6 +125,9 @@
     font-size: var(--size-5);
     height: var(--size-12);
     width: 50%;
+  }
+  .main {
+    padding-top: 3rem;
   }
 
   .textarea {
