@@ -1,4 +1,5 @@
 import React from 'react';
+import confetti from 'canvas-confetti';
 
 import classes from './team.module.css';
 
@@ -9,6 +10,16 @@ const FormInfo = ({
   teamDescription,
   handleDescription,
 }) => {
+  const handleClick = () => {
+    confetti({
+      zIndex: 999,
+      particleCount: 200,
+      spread: 200,
+      angle: 90,
+      startVelocity: 60,
+    });
+  };
+
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       <input
@@ -26,7 +37,7 @@ const FormInfo = ({
         onChange={handleDescription}
       />
 
-      <button className={classes.btn} type="submit">
+      <button onClick={handleClick} className={classes.btn} type="submit">
         Add Info
       </button>
     </form>
