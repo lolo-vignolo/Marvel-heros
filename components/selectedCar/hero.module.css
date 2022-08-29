@@ -105,12 +105,28 @@
   align-self: center;
   margin-left: 1rem;
 }
+
+@media (min-width: 576px) {
+  .comicsCont h1 {
+    font-size: var(--size-8);
+    margin-left: 2rem;
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .comicsCont h1 {
-    font-size: var(--size-12);
+    font-size: var(--size-10);
     color: var(--color-primary-500);
     width: 100%;
     margin: auto;
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 990px) {
+  .comicsCont h1 {
+    margin-left: 5rem;
   }
 }
 
