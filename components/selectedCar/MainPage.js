@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import confetti from 'canvas-confetti';
 
-import { existInTeam, toggleLocalTeam } from '../helpers/localTeam';
+import { existInTeam, toggleLocalTeam } from '../../helpers/localTeam';
 import ComicsGrid from './ComicsGrid';
 import classes from './hero.module.css';
 

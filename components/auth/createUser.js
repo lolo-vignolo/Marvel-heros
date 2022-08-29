@@ -1,21 +1,21 @@
-async function createUser(email, password) {
-  const response = await fetch('/api/auth/signup', {
-    method: 'POST',
-    body: JSON.stringify({ email, password }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+// async function createUser(email, password) {
+//   const response = await fetch('/api/auth/signup', {
+//     method: 'POST',
+//     body: JSON.stringify({ email, password }),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
 
-  const data = await response.json();
+//   const data = await response.json();
 
-  console.log(data);
+//   console.log(data);
 
-  if (!response.ok) {
-    throw new Error(data.message || 'Something went wrong!');
-  }
+//   if (!response.ok) {
+//     throw new Error(data.message || 'Something went wrong!');
+//   }
 
-  return data;
-}
+//   return data;
+// }
 
-export default createUser;
+// export default createUser;

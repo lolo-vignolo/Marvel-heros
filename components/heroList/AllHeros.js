@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import { usePagination } from '../../hooks/usePagination';
 import HerosGrid from './HerosGrid';
 import Empty from '../emptySearch/Empty';
-import { Pagination } from '../helpers/Pagination';
+
 import classes from './all-heros.module.css';
+import { Pagination } from '../../helpers/Pagination';
 
 const AllHeros = ({ heros }) => {
   const [search, setSearch] = useState('');

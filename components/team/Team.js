@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import TeamList from './TeamList';
 import Empty from '../emptySearch/Empty';
-import { getInfoTeam, herosLocalStorage, infoTeam } from '../helpers/localTeam';
+
 import classes from './team.module.css';
+import {
+  getInfoTeam,
+  herosLocalStorage,
+  infoTeam,
+} from '../../helpers/localTeam';
 
 const Team = ({ herosStatic }) => {
   const [heros, setHeroes] = useState(herosLocalStorage());
