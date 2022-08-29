@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .company {
     width: 50%;
     height: 100%;
