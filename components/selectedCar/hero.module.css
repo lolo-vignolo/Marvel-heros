@@ -102,7 +102,7 @@
 .series {
   font-size: var(--size-4);
   margin-bottom: 0;
-  align-self: flex-start;
+  align-self: center;
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
@@ -114,7 +114,7 @@
   }
 }
 
-@media (min-width: 915px) {
+@media (min-width: 1200px) {
   .btn {
     position: absolute;
     top: 1rem;
@@ -168,6 +168,12 @@
     margin-bottom: 0;
     margin-left: 1rem;
   }
+  .series {
+    font-size: var(--size-4);
+    margin-bottom: 0;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -181,5 +187,11 @@
   }
   .info h3 {
     margin-top: 0rem;
+  }
+  .series {
+    font-size: var(--size-4);
+    margin-bottom: 0;
+    align-self: flex-start;
+    margin-left: 1rem;
   }
 }
