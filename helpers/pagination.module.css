@@ -28,9 +28,9 @@
 
 @media (min-width: 768px) {
   .item {
-    font-size: var(--size-8);
-    height: var(--size-16);
+    font-size: var(--size-5);
+    height: var(--size-10);
     margin-top: var(--size-8);
-    width: var(--size-16);
+    width: var(--size-10);
   }
 }
