@@ -46,5 +46,6 @@
   .container h6 {
     font-size: var(--size-4);
     color: var(--color-prymary-300);
+    margin-top: -0.5rem;
   }
 }
