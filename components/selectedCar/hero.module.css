@@ -125,7 +125,6 @@
     font-size: var(--size-12);
     color: var(--color-primary-500);
     width: 100%;
-    max-width: 50rem;
     margin: auto;
   }
   .img {

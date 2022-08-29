@@ -45,7 +45,7 @@ const MainPage = ({ hero, comicsResp }) => {
         </div>
         <div className={classes.info}>
           <button className={classes.btn} onClick={onToggleTeam}>
-            {isInTeam ? 'Delete from my Team' : 'Save as Favorite'}
+            {isInTeam ? 'Delete from my Team' : 'Save in my Team'}
           </button>
           <h1>Name: {name}</h1>
           <h3>ID: {id}</h3>
