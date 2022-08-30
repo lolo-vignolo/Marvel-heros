@@ -17,6 +17,10 @@ const FormInfo = ({
       spread: 200,
       angle: 90,
       startVelocity: 60,
+      origin: {
+        x: 0.5,
+        y: 0.9,
+      },
     });
   };
 

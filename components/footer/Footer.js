@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={classes.company}>
         <Image src="/pictures/comics.png" alt="logo" width={70} height={60} />
         <h4>Kubide & Marvel</h4>
-        <Image src="/pictures/kubide.png" alt="logo" width={70} height={60} />
+        <Image src="/pictures/kubide.png" alt="logo" width={68} height={58} />
       </div>
       <div>
         <h6>CopyRight Lorenzo Vignolo 2022</h6>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import TeamList from './TeamList';
 import Empty from '../emptySearch/Empty';

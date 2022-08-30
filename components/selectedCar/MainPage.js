@@ -49,19 +49,31 @@ const MainPage = ({ hero, comicsResp }) => {
           </button>
           <h1>Name: {name}</h1>
           <h3>ID: {id}</h3>
-
-          <h3>You can find this Hero in the below Series:</h3>
-          {comicsList?.map((comic, index) => (
-            <div className={classes.series} key={index}>
-              <h4>. {comic.name}</h4>
-            </div>
-          ))}
-          <div></div>
+          {comicsList.length > 0 ? (
+            <>
+              <h3>You can find this Hero in the below Series:</h3>
+              {comicsList?.map((comic, index) => (
+                <div className={classes.series} key={index}>
+                  <h4>. {comic.name}</h4>
+                </div>
+              ))}
+            </>
+          ) : (
+            <h3 style={{ color: '#b71c1c' }}>
+              There is not information about this hero Series.
+            </h3>
+          )}
         </div>
       </div>
       <div className={classes.comicsCont}>
-        <h1> Comics related to this Hero:</h1>
-        <ComicsGrid comics={comicsResp} />
+        {comicsResp.length > 0 ? (
+          <>
+            <h1> Comics related to this Hero:</h1>
+            <ComicsGrid comics={comicsResp} />
+          </>
+        ) : (
+          <h1>No comics for this Hero.</h1>
+        )}
       </div>
     </section>
   );
