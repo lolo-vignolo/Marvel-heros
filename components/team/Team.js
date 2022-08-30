@@ -3,27 +3,24 @@ import React, { useEffect, useState } from 'react';
 import TeamList from './TeamList';
 import Empty from '../emptySearch/Empty';
 
-import classes from './team.module.css';
-import {
-  getInfoTeam,
-  herosLocalStorage,
-  infoTeam,
-} from '../../helpers/localTeam';
+import { getInfoTeam } from '../../helpers/localTeam';
 import FormInfo from './FormInfo';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import classes from './team.module.css';
 
 const Team = ({ herosStatic }) => {
-  const [heros, setHeroes] = useState(herosLocalStorage());
-  const [herosInfo, setHerosInfo] = useState([]);
-
-  const [teamName, setTeamName] = useState('');
-  const [teamDescription, setTeamDescription] = useState('');
-
-  const [getInfoStoreage, setGetInfoStoreage] = useState({});
-
-  const information = {
+  const {
+    heros,
+    herosInfo,
+    setHerosInfo,
     teamName,
     teamDescription,
-  };
+    getInfoStoreage,
+    setGetInfoStoreage,
+    handleName,
+    handleDescription,
+    handleSubmit,
+  } = useLocalStorage();
 
   useEffect(() => {
     setGetInfoStoreage(getInfoTeam());
@@ -34,23 +31,7 @@ const Team = ({ herosStatic }) => {
         )
       );
     }
-  }, [heros, herosStatic]);
-
-  const handleName = (e) => {
-    setTeamName(e.target.value);
-  };
-
-  const handleDescription = (e) => {
-    setTeamDescription(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    infoTeam(information);
-    setGetInfoStoreage(getInfoTeam());
-    setTeamName('');
-    setTeamDescription('');
-  };
+  }, [heros, herosStatic, setHerosInfo, setGetInfoStoreage]);
 
   const empty = {
     height: 600,

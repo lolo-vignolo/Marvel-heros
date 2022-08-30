@@ -166,14 +166,14 @@
   }
   .info h1 {
     align-self: flex-start;
-    font-size: var(--size-10);
-    margin-bottom: 0;
+    font-size: var(--size-9);
+    margin-bottom: o.5rem;
     margin-left: 1rem;
     margin-top: 5.5rem;
   }
   .info h3 {
     align-self: flex-start;
-    font-size: var(--size-8);
+    font-size: var(--size-6);
     margin-bottom: 0;
     margin-top: -0.5rem;
     margin-left: 1rem;
