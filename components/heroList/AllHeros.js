@@ -32,7 +32,7 @@ const AllHeros = ({ heros }) => {
   };
 
   return (
-    <motion.div layout className={classes.allPosts}>
+    <div className={classes.allPosts}>
       <section className={classes.posts}>
         <div className={classes.search}>
           <motion.h1
@@ -78,7 +78,7 @@ const AllHeros = ({ heros }) => {
         paginate={paginate}
         itemsPerPage={itemsPerPage}
       />
-    </motion.div>
+    </div>
   );
 };
 
