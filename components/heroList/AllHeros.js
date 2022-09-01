@@ -10,6 +10,7 @@ import classes from './all-heros.module.css';
 import { Pagination } from '../../helpers/Pagination';
 
 const AllHeros = ({ heros }) => {
+  console.log(heros);
   const [search, setSearch] = useState('');
   const [filteredHeros, setFilteredHeros] = useState(heros);
 
