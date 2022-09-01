@@ -34,19 +34,4 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-// export async function getServerSideProps(context) {
-//   const resp = await heroApi.get(`/characters/${context.query.id}`);
-//   const data = resp.data['data']['results'];
-
-//   const comics = await heroApi.get(`/characters/${context.query.id}/comics`);
-//   const comicsData = comics.data['data']['results'];
-
-//   return {
-//     props: {
-//       hero: data[0],
-//       comicsResp: comicsData,
-//     },
-//   };
-// }
-
 export default Hero;
