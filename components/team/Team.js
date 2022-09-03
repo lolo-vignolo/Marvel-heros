@@ -13,12 +13,10 @@ const Team = ({ herosStatic }) => {
     heros,
     herosInfo,
     setHerosInfo,
-    teamName,
-    teamDescription,
+    teamInfo,
     getInfoStoreage,
     setGetInfoStoreage,
-    handleName,
-    handleDescription,
+    handleTeamInfo,
     handleSubmit,
   } = useLocalStorage();
 
@@ -66,11 +64,9 @@ const Team = ({ herosStatic }) => {
       <div>
         {heros.length > 0 ? (
           <FormInfo
-            handleName={handleName}
-            handleDescription={handleDescription}
             handleSubmit={handleSubmit}
-            teamName={teamName}
-            teamDescription={teamDescription}
+            handleTeamInfo={handleTeamInfo}
+            teamInfo={teamInfo}
           />
         ) : (
           ''

@@ -3,13 +3,7 @@ import confetti from 'canvas-confetti';
 
 import classes from './team.module.css';
 
-const FormInfo = ({
-  handleSubmit,
-  teamName,
-  handleName,
-  teamDescription,
-  handleDescription,
-}) => {
+const FormInfo = ({ handleSubmit, handleTeamInfo, teamInfo }) => {
   const handleClick = () => {
     confetti({
       zIndex: 999,
@@ -29,16 +23,16 @@ const FormInfo = ({
       <input
         className={classes.input}
         placeholder="Team Name..."
-        name="title"
-        value={teamName}
-        onChange={handleName}
+        name="teamName"
+        value={teamInfo.teamName}
+        onChange={handleTeamInfo}
       />
       <textarea
         className={classes.textarea}
         placeholder="Description..."
-        name="description"
-        value={teamDescription}
-        onChange={handleDescription}
+        name="teamDescription"
+        value={teamInfo.teamDescription}
+        onChange={handleTeamInfo}
       />
 
       <button onClick={handleClick} className={classes.btn} type="submit">

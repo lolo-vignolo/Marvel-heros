@@ -6,30 +6,32 @@ export const useLocalStorage = () => {
   const [heros, setHeroes] = useState(herosLocalStorage());
   const [herosInfo, setHerosInfo] = useState([]);
 
-  const [teamName, setTeamName] = useState('');
-  const [teamDescription, setTeamDescription] = useState('');
+  const [teamInfo, setTeamInfo] = useState({
+    teamName: '',
+    teamDescription: '',
+  });
 
   const [getInfoStoreage, setGetInfoStoreage] = useState({});
 
-  const information = {
-    teamName,
-    teamDescription,
-  };
+  const handleTeamInfo = ({ target }) => {
+    const { name, value } = target;
 
-  const handleName = (e) => {
-    setTeamName(e.target.value);
-  };
+    const newInfo = {
+      ...teamInfo,
+      [name]: value,
+    };
 
-  const handleDescription = (e) => {
-    setTeamDescription(e.target.value);
+    setTeamInfo(newInfo);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    infoTeam(information);
+    infoTeam(teamInfo);
     setGetInfoStoreage(getInfoTeam());
-    setTeamName('');
-    setTeamDescription('');
+    setTeamInfo({
+      teamName: '',
+      teamDescription: '',
+    });
   };
 
   return {
@@ -37,12 +39,10 @@ export const useLocalStorage = () => {
     setHeroes,
     herosInfo,
     setHerosInfo,
-    teamName,
-    teamDescription,
+    teamInfo,
     getInfoStoreage,
     setGetInfoStoreage,
-    handleName,
-    handleDescription,
+    handleTeamInfo,
     handleSubmit,
   };
 };
